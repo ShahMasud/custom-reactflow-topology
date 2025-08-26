@@ -12,7 +12,7 @@
   }
   
   .sidebar.open {
-    right: 0; /* Move the sidebar to the right when it's open */
+    right: 1; /* Move the sidebar to the right when it's open */
   }
   
   .toggle-button {
