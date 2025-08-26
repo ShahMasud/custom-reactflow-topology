@@ -1,23 +1,16 @@
-import React, {useEffect, useState,} from "react";
+import React, {useState} from "react";
 import Sidebar from "./sidebar/Sidebar";
 import { IoIosMenu } from 'react-icons/io';
 import { IoCloseSharp } from "react-icons/io5";
 import 'reactflow/dist/style.css';
 import { useCallback, useMemo } from 'react';
-// import CustomNode from "./CustomNode";
 import TextUpdaterNode from "./CustomNode";
 import TextUpdaterNode2 from "./CustomNode2";
 import TextUpdaterNode3 from "./CustomNode3";
 
 import ReactFlow, {
   applyNodeChanges,
-  MiniMap,
-  Controls,
-  Background,
-  useNodesState,
-  useEdgesState,
-  addEdge,
-  
+  addEdge,  
 } from 'reactflow';
 
 import Data from "./response";
@@ -156,12 +149,9 @@ const nodeTypes = useMemo(() => ({
 
        <ReactFlow
         className="react_flow"
-        // elements={updatedNodes.concat(edges)}
-        // nodes={updatedNodes}
         nodes={nodes} 
         edges={edges}
         onNodesChange={onNodesChange}
-        // onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         elementsSelectable={false}
         nodesDraggable={false}
@@ -170,9 +160,7 @@ const nodeTypes = useMemo(() => ({
         zoomOnScroll={false}
         onNodeClick={onNodeClick}
         nodeTypes={nodeTypes}
-        
-        // style={rfStyle}   
-    > 
+        > 
     </ReactFlow>
      </div>
        </>

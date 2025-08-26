@@ -1,13 +1,5 @@
-import { useCallback } from 'react';
 import { Handle, Position } from 'reactflow';
-import Data from './response';
-const handleStyle = { left: 10 };
-
 function TextUpdaterNode({ type, isConnectable }) {
-    // console.log(data);
-  const onChange = useCallback((evt) => {
-    console.log(evt.target.value);
-  }, []);
 
   return (
     <div className="text-updater-node">
@@ -28,13 +20,7 @@ function TextUpdaterNode({ type, isConnectable }) {
             }}>
                 {type}
       </div>
-      {/* <Handle
-        type="source"
-        position={Position.Bottom}
-        id="a"
-        style={handleStyle}
-        isConnectable={isConnectable}
-      /> */}
+     
       <Handle type="source" position={Position.Bottom} id="b" isConnectable={isConnectable} />
     </div>
   );
