@@ -1,12 +1,14 @@
 import React, {useEffect, useState,} from "react";
 import Sidebar from "./sidebar/Sidebar";
 import { IoIosMenu } from 'react-icons/io';
+import { IoCloseSharp } from "react-icons/io5";
 import 'reactflow/dist/style.css';
 import { useCallback, useMemo } from 'react';
 // import CustomNode from "./CustomNode";
 import TextUpdaterNode from "./CustomNode";
 import TextUpdaterNode2 from "./CustomNode2";
 import TextUpdaterNode3 from "./CustomNode3";
+
 import ReactFlow, {
   applyNodeChanges,
   MiniMap,
@@ -26,7 +28,7 @@ const initialEdges = Data.edges_list
 
 const Flow = ()=>{
   const [nodes, setNodes] = useState(initialNodes);
-  const [edges, setEdges] = useState( );
+  const [edges, setEdges] = useState(initialEdges);
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
     [setNodes]
@@ -132,13 +134,18 @@ const nodeTypes = useMemo(() => ({
 
 
     return (
-     <div className="flow-div">
+       <>
+         <div style={{textAlign:"center", background:"#4092d9ff", color:"white", padding:"10px"}}>
+         <h3 style={{margin:"0px"}}>Explore Network Connections</h3>
+      <p style={{margin:"0px"}}>Click any router, interface, or community to highlight its direct connections.</p>
+       </div>
+        <div className="flow-div">
       
       <div>
         <button onClick={toggleSidebar} 
         className="toggle-button"
         >
-          <IoIosMenu size={30} />
+        {isSidebarOpen? <IoCloseSharp size={30} color="white" />:  <IoIosMenu size={30} color="white" />}
         </button>
         {isSidebarOpen? <Sidebar />: ""}
       </div>
@@ -168,8 +175,10 @@ const nodeTypes = useMemo(() => ({
     > 
     </ReactFlow>
      </div>
+       </>
+     
+     
       );
 
 }
 export default Flow
-

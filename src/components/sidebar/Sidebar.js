@@ -55,7 +55,7 @@ const Sidebar = () => {
       ))}
     </Form>
         </ul>
-        <Button className='submit_btn' variant="primary">Submit</Button>
+        <Button className='submit_btn' variant="primary">Filter</Button>
       </div>
     </div>
   );
