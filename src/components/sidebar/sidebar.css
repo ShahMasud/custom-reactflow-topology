@@ -1,0 +1,81 @@
+/* Sidebar.css */
+.sidebar {
+    width: 0;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Adjust the initial position to the right */
+    transition: right 0.3s ease-in-out; /* Update the transition property */
+    z-index: 1;
+  }
+  
+  .sidebar.open {
+    right: 0; /* Move the sidebar to the right when it's open */
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 0px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .sidebar-content {
+    box-shadow: rgba(red, green, blue, alpha) !important;
+    position: absolute;
+    right: 0;
+    z-index: 1 !important;
+    width: 15%;
+    margin-left: auto;
+    background-color: #F7FBF8;
+    padding: 20px;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar-content p{
+    font-weight: 700;
+  }
+  .submit_btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: #009BDB;
+    border-radius: 20px;
+    padding: 10px;
+    border-color: transparent !important;
+    color: white;
+    font-size: 16px;
+  }
+  .submit_btn:hover{
+    cursor: pointer;
+  }
+  .form-check{
+    display: flex !important;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-content ul li:hover {
+    color: #ffcc00;
+  }
+  
+  /* Add more styles as needed */
+  

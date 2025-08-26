@@ -1,0 +1,80 @@
+/* .text-updater-node {
+  height: 50px;
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  background: white;
+}
+
+.text-updater-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+} */
+
+
+
+
+
+
+
+
+/* ================================================ */
+
+.flow-div{
+  /* background-color: #9DD9F1; */
+  background-image: url("./assets/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  
+  
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999 !important; */
+}
+.react_flow{
+  width: 90% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* position: fixed; */
+  user-drag: none;
+  user-select: none;
+  touch-action: none;
+  pointer-events: none;
+
+}
+
+
+/* ============== */
+/* .content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.shifted {
+  margin-left: 250px;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-button:focus {
+  outline: none;
+} */
+
+
+
